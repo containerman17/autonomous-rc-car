@@ -1,0 +1,217 @@
+    1  which x0vncserver
+    2  sudo apt install tightvncserver
+    3  vncserver 
+    4  vncserver -kill :1
+    5  mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
+    6  nano ~/.vnc/xstartup
+    7  sudo apt-get install nano -y
+    8  nano ~/.vnc/xstartup
+    9  cp ~/.vnc/xstartup
+   10  cp ~/.vnc/xstartup.bak ~/.vnc/xstartup
+   11  sudo chmod +x ~/.vnc/xstartup
+   12  vncserver
+   13  cd ~/Downloads/
+   14  unzip ngrok-stable-linux-arm64.zip 
+   15  mv ngrok /usr/local/bin/
+   16  sudo mv ngrok /usr/local/bin/
+   17  ngrok
+   18  ngrok authtoken 1clRpTr1uBRm78gEIFw4W8DokIl_2QTSY4gp3uGfeMYqzYSRt
+   19  ngrok tcp 5901
+   20  ngrok tcp 5900
+   21  vncconnect 
+   22  vncconnect localhost:5900
+   23  vncconnect localhost:5901
+   24  vncconnect localhost:5902
+   25  lsof
+   26  sudo apt install net-tools
+   27  sudo netstat -tunlp
+   28  sudo netstat -tunlp | grep 590
+   29  nano ~/.vnc/xstartup
+   30  vncserver :0
+   31  ngrok tcp 5900
+   32  ngrok tcp 5901
+   33  nano /opt/ngrok/conf/ngrok.yml
+   34  nano ~/.ngrok2/ngrok.yml
+   35  ngrok start vnc
+   36  nano ~/.ngrok2/ngrok.yml
+   37  ngrok start vnc
+   38  nano ~/.ngrok2/ngrok.yml
+   39  ngrok start vnc
+   40  nano ~/.ngrok2/ngrok.yml
+   41  ngrok start vnc
+   42  ngrok start vnc --region=eu
+   43  ngrok start --all --region=eu
+   44  ls /lib/systemd/system/
+   45  nano /lib/systemd/system/ngrok.service
+   46  sudo nano ~/.ngrok2/ngrok.yml
+   47  sudo nano /lib/systemd/system/ngrok.service
+   48  cat /home/dev/.ngrok2/ngrok.yml
+   49  sudo nano /lib/systemd/system/ngrok.service 
+   50  ps
+   51  ps -aux
+   52  ps -aux | grep ngrok-stable-linux-arm64.zip 
+   53  ps -aux | grep ngrok
+   54  servvice ngrok.servise
+   55  servvice ngrok.service status
+   56  service ngrok.service s
+   57  systemctl status ngrok.service
+   58  sudo nano /lib/systemd/system/ngrok.service 
+   59  systemctl status ngrok.service
+   60  sudo     systemctl enable ngrok.service
+   61  sudo     systemctl start ngrok.service
+   62  systemctl status ngrok.service
+   63  gnome-panel
+   64  gnome-shell
+   65  nano ~/.vnc/xstartup
+   66  ls -lth ~/.vnc/xstartup
+   67  chmod +x ~/.vnc/xstartup
+   68  ls -lth ~/.vnc/xstartup
+   69  apt-get remove tightvnc
+   70  sudo apt-get remove tightvnc
+   71  sudo apt-get remove vncserver 
+   72  vncserver 
+   73  history | grep vnc
+   74  sudo apt-get remove tightvncserver
+   75  sudo apt-get install tigervnc-scraping-server
+   76  mkdir -p ~/.vnc
+   77  vncpasswd 
+   78  x0vncserver -passwordfile ~/.vnc/passwd -display :0
+   79  nano ~/.ngrok2/ngrok.yml 
+   80  x0vncserver -passwordfile ~/.vnc/passwd -display :0
+   81  history 
+   82  sudo nano /lib/systemd/system/ngrok.service 
+   83  sudo nano /lib/systemd/system/vnc.service 
+   84  sudo sysctl start vnc.service
+   85  sudo systemctl start vnc.service
+   86  sudo systemct lenable  vnc.service
+   87  sudo systemctl enable  vnc.service
+   88  sudo systemctl restart ngrok.service 
+   89  ls
+   90  pwd
+   91  nano temp.txt
+   92  tegrastats 
+   93  sudo apt install terminator
+   94  ls
+   95  roscore
+   96  cd ~/Downloads/
+   97  ls
+   98  sudo pip install Jetson.GPIO
+   99  sudo apt-get install python3-pip
+  100  pip
+  101  pip3
+  102  sudo pip install Jetson.GPIO
+  103  sudo pip3 install Jetson.GPIO
+  104  cd ~/Desktop/
+  105  python3 driver.py 
+  106  cd ~/Desktop/
+  107  python3 driver.py 
+  108  pinout
+  109  python3 driver.py 
+  110  cd ~/Downloads/
+  111  l
+  112  ls
+  113  sudo apt-get install -y ./code_1.45.1-1589445302_amd64\ \(1\).deb 
+  114  cd ../Desktop/
+  115  ls
+  116  nano driver.py
+  117  gedit driver.py
+  118  cd ~/Desktop/
+  119  python3 driver.py 
+  120  cd Desktop/
+  121  python3 driver.py 
+  122  cd Desktop/
+  123  python3 driver.py 
+  124  h | grep launch
+  125  roslaunch realsense2_camera demo_t265.launch serial_no:=0000944222110589
+  126  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569
+  127  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  128  r
+  129  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  130  r
+  131  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  132  gedit .bashrc
+  133  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  134  r
+  135  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  136  r
+  137  cd
+  138  wget https://github.com/IntelRealSense/librealsense/raw/master/scripts/libuvc_installation.sh
+  139  chmod +x libuvc_installation.sh 
+  140  ./libuvc_installation.sh 
+  141  realsense-viewer 
+  142  realsense-viewer 
+  143  r
+  144  realsense-viewer 
+  145  r
+  146  gedit .bashrc
+  147  ls
+  148  cd installLibrealsense/scripts/
+  149  ls
+  150  cd ..
+  151  ls
+  152  cd 
+  153  sudo apt update; sudo apt upgrade; sudo apt --only-upgrade install librealsense2-utils librealsense2-dev librealsense2-dkms
+  154  sudo apt install librealsense2-dkms
+  155  r
+  156  cd catkin_ws/
+  157  h | grep catkin
+  158  cm
+  159  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  160  cd catkin_ws/
+  161  cc
+  162  rm -rf build/ devel/ install/
+  163  cm
+  164  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  165  r
+  166  cd ..
+  167  mv catkin_ws/ back_catkin_ws
+  168  cd installROS/
+  169  ./setupCatkinWorkspace.sh 
+  170  sudo apt install ros-melodic-realsense2-camera ros-melodic-librealsense2 -y
+  171  sudo apt remove ros-melodic-realsense2-camera ros-melodic-librealsense2 -y
+  172  cd ../
+  173  rm -rf catkin_ws/
+  174  mv back_catkin_ws/ catkin_ws
+  175  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  176  r
+  177  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  178  cd catkin_ws/
+  179  cm
+  180  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  181  cd ..
+  182  mv catkin_ws/ catkin_ws_bak
+  183  cd installROS/
+  184  ./setupCatkinWorkspace.sh 
+  185  cd ../installRealSenseROS/
+  186  ls
+  187  ./installRealSenseROS.sh 
+  188  cd ../catkin_ws
+  189  sds
+  190  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  191  roslaunch realsense2_camera rs_camera.launch serial_no:=925622071569 camera:=d435i
+  192  realsense-viewer 
+  193  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  194  realsense-viewer 
+  195  cd src/realsense-ros/
+  196  git pull origin master
+  197  ls
+  198  ll
+  199  git pull origin development 
+  200  rt list
+  201  rostopic list
+  202  rviz
+  203  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  204  cm
+  205  cd catkin_ws; cm
+  206  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435i
+  207  roslaunch realsense2_camera demo_t265.launch serial_no:=944222110589
+  208  roslaunch realsense2_camera cameras.launch 
+  209  sudo apt install ros-melodic-rgbd-launch 
+  210  roslaunch realsense2_camera cameras.launch 
+  211  roslaunch realsense2_camera demo_pointcloud.launch serial_no:=925622071569 camera:=d435ir
+  212  r
+  213  roslaunch realsense2_camera cameras.launch 
+  214  r
+  215  roslaunch realsense2_camera cameras.launch 
+  216  cd src/autonomous-rc-car/
+  217  h > history.log
