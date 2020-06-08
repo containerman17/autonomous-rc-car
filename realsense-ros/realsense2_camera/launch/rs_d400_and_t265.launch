@@ -36,7 +36,7 @@
   <arg name="accel_fps"           default="250"/>
   <arg name="enable_gyro"         default="true"/>
   <arg name="enable_accel"        default="true"/>
-  <arg name="unite_imu_method"          default=""/>
+  <arg name="unite_imu_method"          default="linear_interpolation"/>
 
   <arg name="enable_pointcloud"   default="true"/>
   <arg name="enable_sync"         default="true"/>
@@ -62,7 +62,7 @@
   <arg name="rgb_processing"                  default="true"/>
   <arg name="debayer_processing"              default="false" />
   <arg name="ir_processing"                   default="false"/>
-  <arg name="depth_processing"                default="false"/>
+  <arg name="depth_processing"                default="true"/>
   <arg name="depth_registered_processing"     default="true"/>
   <arg name="disparity_processing"            default="false"/>
   <arg name="disparity_registered_processing" default="false"/>
@@ -79,6 +79,7 @@
       <arg name="enable_fisheye1"       value="$(arg enable_fisheye)"/>
       <arg name="enable_fisheye2"       value="$(arg enable_fisheye)"/>
       <arg name="topic_odom_in"         value="$(arg topic_odom_in)"/>
+      <arg name="unite_imu_method"         value="$(arg unite_imu_method)"/>
       <arg name="calib_odom_file"       value="$(arg calib_odom_file)"/>
     </include>
   </group>

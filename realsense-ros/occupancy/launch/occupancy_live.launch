@@ -1,4 +1,4 @@
 <launch>
-  <include file="$(find occupancy)/launch/cameras.launch"/>
+  <include file="$(find realsense2_camera)/launch/cameras.launch"/>
   <include file="$(find occupancy)/launch/occupancy.launch"/>
 </launch>
