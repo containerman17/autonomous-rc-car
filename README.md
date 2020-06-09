@@ -18,6 +18,14 @@ Follow [Arduino Installation](https://github.com/JetsonHacksNano/installArduinoI
 ### 1.4. **Install rosserial for ROS-Arduino communication**
 Follow [Arduino Installation](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
 
+### 1.5. **Install RTAB-Map ROS**
+```
+sudo apt install ros-melodic-rtabmap ros-melodic-rtabmap-ros
+```
+### 1.6. **Install Robot-Localization**
+```
+sudo apt install ros-melodic-robot-localization
+```
 ## 2. Build & Install
 Clone the repository and catkin_make:
 
