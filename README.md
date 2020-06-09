@@ -12,8 +12,11 @@ Follow [librealsense Installation](https://github.com/JetsonHacksNano/installLib
 ### 1.3. **RealSense ROS Wrapper**
 Follow [ROS-RealSense Installation](https://github.com/JetsonHacksNano/installRealSenseROS).
 
-### 1.3. **Arduion IDE**
+### 1.3. **Arduino IDE**
 Follow [Arduino Installation](https://github.com/JetsonHacksNano/installArduinoIDE).
+
+### 1.4. **Install rosserial for ROS-Arduino communication**
+Follow [Arduino Installation](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup)
 
 ## 2. Build & Install
 Clone the repository and catkin_make:
