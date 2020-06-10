@@ -8,7 +8,6 @@ Panels:
         - /Status1
         - /Odometry1/Shape1
         - /Odometry1/Covariance1
-        - /TF1/Frames1
         - /DepthCloud1/Auto Size1
         - /DepthCloud1/Occlusion Compensation1
         - /Map1/Status1
@@ -95,7 +94,7 @@ Visualization Manager:
         Color: 255; 25; 0
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
-        Shaft Length: 1
+        Shaft Length: 0.30000001192092896
         Shaft Radius: 0.05000000074505806
         Value: Arrow
       Topic: /t265/odom/sample
@@ -106,35 +105,35 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        d435i_accel_frame:
+        d400_accel_frame:
           Value: false
-        d435i_accel_optical_frame:
+        d400_accel_optical_frame:
           Value: false
-        d435i_aligned_depth_to_color_frame:
+        d400_aligned_depth_to_color_frame:
           Value: false
-        d435i_aligned_depth_to_infra1_frame:
+        d400_aligned_depth_to_infra1_frame:
           Value: false
-        d435i_color_frame:
+        d400_color_frame:
           Value: false
-        d435i_color_optical_frame:
+        d400_color_optical_frame:
           Value: false
-        d435i_depth_frame:
+        d400_depth_frame:
           Value: false
-        d435i_depth_optical_frame:
+        d400_depth_optical_frame:
           Value: false
-        d435i_gyro_frame:
+        d400_gyro_frame:
           Value: false
-        d435i_imu_optical_frame:
+        d400_imu_optical_frame:
           Value: false
-        d435i_infra1_frame:
+        d400_infra1_frame:
           Value: false
-        d435i_infra1_optical_frame:
+        d400_infra1_optical_frame:
           Value: false
-        d435i_infra2_frame:
+        d400_infra2_frame:
           Value: false
-        d435i_infra2_optical_frame:
+        d400_infra2_optical_frame:
           Value: false
-        d435i_link:
+        d400_link:
           Value: true
         t265_accel_frame:
           Value: false
@@ -166,28 +165,28 @@ Visualization Manager:
       Tree:
         t265_odom_frame:
           t265_pose_frame:
-            d435i_link:
-              d435i_accel_frame:
-                d435i_accel_optical_frame:
+            d400_link:
+              d400_accel_frame:
+                d400_accel_optical_frame:
                   {}
-              d435i_aligned_depth_to_color_frame:
-                d435i_color_optical_frame:
+              d400_aligned_depth_to_color_frame:
+                d400_color_optical_frame:
                   {}
-              d435i_aligned_depth_to_infra1_frame:
-                d435i_infra1_optical_frame:
+              d400_aligned_depth_to_infra1_frame:
+                d400_infra1_optical_frame:
                   {}
-              d435i_color_frame:
+              d400_color_frame:
                 {}
-              d435i_depth_frame:
-                d435i_depth_optical_frame:
+              d400_depth_frame:
+                d400_depth_optical_frame:
                   {}
-              d435i_gyro_frame:
-                d435i_imu_optical_frame:
+              d400_gyro_frame:
+                d400_imu_optical_frame:
                   {}
-              d435i_infra1_frame:
+              d400_infra1_frame:
                 {}
-              d435i_infra2_frame:
-                d435i_infra2_optical_frame:
+              d400_infra2_frame:
+                d400_infra2_optical_frame:
                   {}
             t265_link:
               t265_accel_frame:
@@ -255,7 +254,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /d435i/color/image_raw
+      Image Topic: /d400/color/image_rect_color
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -302,7 +301,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.10000000149011612
       Style: Flat Squares
-      Topic: /d435i/depth/color/points
+      Topic: /d400/depth/color/points
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -335,35 +334,35 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 6.180939674377441
+      Distance: 9.481953620910645
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.6315163969993591
-        Y: -0.15230217576026917
-        Z: 0.5209356546401978
+        X: -1.0853369235992432
+        Y: 1.0892678499221802
+        Z: 0.5699840784072876
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.7447962164878845
+      Pitch: 1.524795651435852
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.230395555496216
+      Yaw: 3.170395612716675
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: false
+    collapsed: true
   Height: 1025
-  Hide Left Dock: false
+  Hide Left Dock: true
   Hide Right Dock: false
   Image:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000019300000379fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000002700000379000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000023500000379fc0200000005fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a0056006900650077007301000000270000011a000000a400fffffffb0000000a0049006d0061006700650100000147000000f80000001600fffffffb0000000a0049006d00610067006501000002450000015b0000001600fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073f0000003efc0100000002fb0000000800540069006d006501000000000000073f000002eb00fffffffb0000000800540069006d006501000000000000045000000000000000000000036b0000037900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000019300000379fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000002700000379000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000023500000379fc0200000005fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a0056006900650077007301000000270000011a000000a400fffffffb0000000a0049006d0061006700650100000147000000f80000001600fffffffb0000000a0049006d00610067006501000002450000015b0000001600fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073f0000003efc0100000002fb0000000800540069006d006501000000000000073f000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000005040000037900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:

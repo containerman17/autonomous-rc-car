@@ -1,19 +1,19 @@
 <launch>
     <arg name="offline"          default="false"/>
     <include unless="$(arg offline)" 
-        file="$(find realsense2_camera)/launch/rs_rgbd.launch">
-        <!-- <arg name="align_depth" value="true"/> -->
-        <!-- <arg name="linear_accel_cov" value="1.0"/> -->
+        file="$(find realsense2_camera)/launch/rs_camera.launch">
+        <arg name="align_depth" value="true"/>
+        <arg name="linear_accel_cov" value="1.0"/>
         <arg name="unite_imu_method" value="linear_interpolation"/>
     </include>
     
     <node pkg="imu_filter_madgwick" type="imu_filter_node" name="ImuFilter">
         <param name="use_mag" type="bool" value="false" />
-        <param name="publish_tf" type="bool" value="true" />
-        <param name="world_frame" type="string" value="enu" />
-        <param name="fixed_frame" type="string" value="camera_link" />
+        <param name="_publish_tf" type="bool" value="false" />
+        <param name="_world_frame" type="string" value="enu" />
         <remap from="/imu/data_raw" to="/camera/imu"/>
     </node>
+
     <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
         <arg name="args" value="--delete_db_on_start"/>
         <arg name="rgb_topic" value="/camera/color/image_raw"/>
@@ -21,7 +21,7 @@
         <arg name="camera_info_topic" value="/camera/color/camera_info"/>
         <arg name="depth_camera_info_topic" value="/camera/depth/camera_info"/>
         <arg name="rtabmapviz" value="false"/>
-        <arg name="rviz" value="false"/>
+        <arg name="rviz" value="true"/>
     </include>
 
     <include file="$(find robot_localization)/launch/ukf_template.launch"/>
@@ -48,5 +48,5 @@
     <param name="/ukf_se/imu0_differential" value="true"/>
     <param name="/ukf_se/imu0_relative" value="false"/>
     <param name="/ukf_se/use_control" value="false"/>
-    <!-- <param name="odom0_config" value="{true,true,true,}"/> -->
+    <!-- <param name="/ukf_se/odom0_config" value="{true,true,true,}"/> -->
 </launch>

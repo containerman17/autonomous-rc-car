@@ -6,6 +6,6 @@
   <param name="DepthOfInterestMax" value="2.0"/>
 
   <node name="occupancy_node" pkg="occupancy" type="occupancy_node" output="screen">
-    <remap from="/d400/depth/camera_info" to="/d435i/depth/camera_info" />
+    <!-- <remap from="/d400/depth/camera_info" to="/d435i/depth/camera_info" /> -->
   </node>
 </launch>
