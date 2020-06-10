@@ -1,0 +1,127 @@
+recovery_behaviour_enabled: true
+
+TrajectoryPlannerROS:
+  max_vel_x: 2.0
+  min_vel_x: -2.0
+  max_vel_y: 0.0
+  min_vel_y: 0.0
+
+# The velocity when robot is moving in a straight line
+  max_trans_vel:  2.0
+  min_trans_vel:  2.0
+
+  max_rot_vel: 0.75
+  min_rot_vel: 0.37
+
+  
+  max_vel_theta:  0.7
+  min_vel_theta: -0.7
+  min_in_place_vel_theta: 0.1
+
+  acc_lim_x: 1.0
+  acc_lim_y: 0.0
+  acc_lim_theta: 0.4
+
+# Forward Simulation Parameters
+  sim_time: 3
+  vx_samples: 20
+  vy_samples: 0
+  vth_samples: 40
+  controller_frequency: 10.0
+
+# Trajectory Scoring Parameters
+  path_distance_bias: 32.0    #weight for how much the local planner should stay close to the global path high value will make the local planner prefer trajectories on global path
+  goal_distance_bias: 20.0
+  ## is the weight for how much the robot should attempt to
+  # reach the local goal, with whatever path. Experiments show that increasing this
+  # parameter enables the robot to be less attached to the global path.
+  occdist_scale: 0.02
+  # occdist scale is the weight for how much the robot should attempt to avoid obstacles.
+  # A high value for this parameter results in indecisive robot that stucks in place
+  
+  # forward_point_distance: 0.325
+  # stop_time_buffer: 0.2
+  # scaling_speed: 0.25
+  # max_scaling_factor: 0.2
+
+# Oscillation Prevention Parameters
+  oscillation_reset_dist: 0.05
+
+# Debugging
+  publish_traj_pc : true
+  publish_cost_grid_pc: true
+
+
+
+DWAPlannerROS:
+  # Robot configuration parameters  
+  max_vel_x: 2.0
+  min_vel_x: -2.0
+  max_vel_y: 0.0
+  min_vel_y: 0.0
+
+# The velocity when robot is moving in a straight line
+  max_trans_vel:  2.0
+  min_trans_vel:  -2.0
+
+  max_rot_vel: 1.0
+  min_rot_vel: 0.5
+
+  
+  max_vel_theta:  0.9
+  min_vel_theta: -0.9
+  min_in_place_vel_theta: 0.1
+
+  acc_lim_x: 1.0
+  acc_lim_y: 0.0
+  acc_lim_theta: 0.4
+
+  # Goal Tolerance Parametes
+  xy_goal_tolerance: 0.2
+  yaw_goal_tolerance: 0.1
+  latch_xy_goal_tolerance: false
+
+  # Forward Simulation Parameters
+  sim_time: 3
+  vx_samples: 20
+  vy_samples: 0
+  vth_samples: 40
+  controller_frequency: 10.0
+
+# Trajectory Scoring Parameters
+  path_distance_bias: 32.0    #weight for how much the local planner should stay close to the global path high value will make the local planner prefer trajectories on global path
+  goal_distance_bias: 20.0
+  ## is the weight for how much the robot should attempt to
+  # reach the local goal, with whatever path. Experiments show that increasing this
+  # parameter enables the robot to be less attached to the global path.
+  occdist_scale: 0.02
+  # occdist scale is the weight for how much the robot should attempt to avoid obstacles.
+  # A high value for this parameter results in indecisive robot that stucks in place
+  # dwa: true #Whether to use the Dynamic Window Approach (DWA)_ or whether to use Trajectory Rollout
+
+  # forward_point_distance: 0.325
+  # stop_time_buffer: 0.2
+  # scaling_speed: 0.25
+  # max_scaling_factor: 0.2
+
+# Oscillation Prevention Parameters
+  oscillation_reset_dist: 0.05
+
+# Debugging
+  publish_traj_pc : true
+  publish_cost_grid_pc: true
+
+# global_planner params                                      
+GlobalPlanner:                                               
+  default_tolerance: 0.2 
+  use_dijkstra: false                                       
+  cost_factor: 0.5489                                        
+  neutral_cost: 66                                           
+  lethal_cost: 253
+  visualize potential: true
+
+NavfnROS:
+  allow_unknown: false # Specifies whether or not to allow navfn to create plans that traverse unknown space.
+  default_tolerance: 0.1 # A tolerance on the goal point for the planner.
+  visualize potential: false
+
