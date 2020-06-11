@@ -1,5 +1,9 @@
 <launch>    
     
+    <include file="$(find realsense2_camera)/launch/cameras.launch"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find occupancy)/rviz/nav.rviz">
+    </node>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="map_to_odom_broadcaster" args="0.0 0.0 0.0 0 0 0 map t265_odom_frame"/>
     <!-- <node pkg="timed_roslaunch" type="timed_roslaunch.sh" args="0 navigation navsat_transform.launch" name="timed_launch_gps" output="screen" /> -->
    
 
