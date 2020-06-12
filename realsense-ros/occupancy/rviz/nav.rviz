@@ -4,7 +4,6 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
         - /Status1
         - /Odometry1/Shape1
         - /Odometry1/Covariance1
@@ -105,6 +104,34 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        d400_accel_frame:
+          Value: false
+        d400_accel_optical_frame:
+          Value: false
+        d400_aligned_depth_to_color_frame:
+          Value: false
+        d400_aligned_depth_to_infra1_frame:
+          Value: false
+        d400_color_frame:
+          Value: false
+        d400_color_optical_frame:
+          Value: false
+        d400_depth_frame:
+          Value: false
+        d400_depth_optical_frame:
+          Value: false
+        d400_gyro_frame:
+          Value: false
+        d400_imu_optical_frame:
+          Value: false
+        d400_infra1_frame:
+          Value: false
+        d400_infra1_optical_frame:
+          Value: false
+        d400_infra2_frame:
+          Value: false
+        d400_infra2_optical_frame:
+          Value: false
         d400_link:
           Value: true
         map:
@@ -128,7 +155,7 @@ Visualization Manager:
         t265_link:
           Value: true
         t265_odom_frame:
-          Value: true
+          Value: false
         t265_pose_frame:
           Value: false
       Marker Scale: 1
@@ -141,7 +168,28 @@ Visualization Manager:
           t265_odom_frame:
             t265_pose_frame:
               d400_link:
-                {}
+                d400_accel_frame:
+                  d400_accel_optical_frame:
+                    {}
+                d400_aligned_depth_to_color_frame:
+                  d400_color_optical_frame:
+                    {}
+                d400_aligned_depth_to_infra1_frame:
+                  d400_infra1_optical_frame:
+                    {}
+                d400_color_frame:
+                  {}
+                d400_depth_frame:
+                  d400_depth_optical_frame:
+                    {}
+                d400_gyro_frame:
+                  d400_imu_optical_frame:
+                    {}
+                d400_infra1_frame:
+                  {}
+                d400_infra2_frame:
+                  d400_infra2_optical_frame:
+                    {}
               t265_link:
                 t265_accel_frame:
                   t265_accel_optical_frame:
@@ -305,12 +353,12 @@ Visualization Manager:
       Class: rviz/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: false
+      Enabled: true
       Name: (Global Cost)Map
       Topic: /move_base/global_costmap/costmap
       Unreliable: false
       Use Timestamp: false
-      Value: false
+      Value: true
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
@@ -377,7 +425,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 37.40070724487305
+      Distance: 10.146635055541992
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -392,10 +440,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.524795651435852
+      Pitch: 1.1247955560684204
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.170395612716675
+      Yaw: 2.94539475440979
     Saved: ~
 Window Geometry:
   Displays:
