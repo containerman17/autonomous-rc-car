@@ -26,6 +26,10 @@ sudo apt install ros-melodic-rtabmap ros-melodic-rtabmap-ros
 ```
 sudo apt install ros-melodic-robot-localization
 ```
+### 1.7. **Install ROS Nav Stack**
+```
+sudo apt install ros-melodic-navigation ros-melodic-map-server ros-melodic-move-base 
+```
 ## 2. Build & Install
 Clone the repository and catkin_make:
 
