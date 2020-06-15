@@ -34,6 +34,7 @@ cd ~/catkin_ws/src
 rm -rf *
 git clone https://github.com/mhaboali/autonomous-rc-car.git
 cd ../
+rosdep install --from-paths src --ignore-src --rosdistro=melodic -y
 catkin_make -DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release
 catkin_make install
 source ~/catkin_ws/devel/setup.bash
