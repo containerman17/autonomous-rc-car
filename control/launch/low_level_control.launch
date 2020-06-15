@@ -1,0 +1,9 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+  
+  <!-- <include file="$(find joy_control)/launch/joy_control.launch"/> -->
+    
+  <node pkg="timed_roslaunch" type="timed_roslaunch.sh" args="3 control arduino_ports.launch" name="timed_launch_teleop"/>
+   
+
+</launch>

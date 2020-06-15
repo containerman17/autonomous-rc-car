@@ -13,13 +13,25 @@ int PWM_LEFT = 6;
 int PWM_MIN = 90;
 int PWMRANGE = 255;
 
+float min_speed = 0.1; // m/s
+float max_speed = 0.2; // m/s
+
 ros::NodeHandle  nh;
 bool force_stop = false;
 float linear_speed_stateValue, angular_speed_stateValue;
-
+float check_speed(float orig_val){
+  float abs_val, ret_val;
+  int sign;
+  abs_val = fabs(orig_val);
+  sign =int(orig_val/abs_val);
+  ret_val = (min_speed > abs_val) ? sign*min_speed : orig_val;
+  ret_val = (abs_val > max_speed) ? sign*max_speed : orig_val;
+  return ret_val;
+  
+}
 void speedCb( const geometry_msgs::Twist& speed_msg){
-  linear_speed_stateValue = speed_msg.linear.x; //linear speed component
-  angular_speed_stateValue = speed_msg.linear.x; //angular_speed_stateValue speed component
+  linear_speed_stateValue = check_speed(speed_msg.linear.x); //linear speed component
+  angular_speed_stateValue = check_speed(speed_msg.angular.z); //angular_speed_stateValue speed component
   
   //command the driving motors
   if(force_stop){
@@ -44,7 +56,7 @@ void setup() {
   pinMode(13, OUTPUT);  //Led
   digitalWrite(13, HIGH);
 
-  Serial.begin(9600);
+//  Serial.begin(9600);
 
   set_velocity_percent(0, 0);
 }
@@ -104,20 +116,7 @@ float mapPwm(float x, float out_min, float out_max)
 }
 
 
-void loop() {
-  if (Serial.available()) {
-    t = Serial.read();
-    Serial.println(t);
-  }
-
-  if (t == 'W') {  //turn led on or off)
-    digitalWrite(13, HIGH);
-    force_stop = true;
-  }
-  else if (t == 'w') {
-    digitalWrite(13, LOW);
-    force_stop = false;
-  }
+void loop() {  
   nh.spinOnce();
-  delay(100);
+  delay(10);
 }

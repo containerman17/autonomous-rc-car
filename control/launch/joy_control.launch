@@ -1,0 +1,19 @@
+<!-- -*- mode: XML -*- -->
+<launch>
+  <arg name="joy_teleop_config"
+       default="$(find joy_control)/config/joy_teleop.yaml" />
+
+  <rosparam file="$(arg joy_teleop_config)" command="load" />
+
+  <node pkg="joy" type="joy_node" name="joy_node" />
+
+  <node pkg="joy_control" type="joy_teleop.py" name="joy_teleop" />
+
+  <node pkg="joy_control" type="JoyControl.py" name="joy_to_arduinos">
+    <param name="node_name" value="jo" />
+  </node>
+  <node pkg="joy_control" type="JoyControl.py" name="twist_to_arduinos" output="screen">
+    <param name="node_name" value="auto" />
+  </node>
+
+</launch>
